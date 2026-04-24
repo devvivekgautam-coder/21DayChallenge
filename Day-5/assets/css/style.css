@@ -5,7 +5,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* Background */
 body {
     height: 100vh;
     display: flex;
@@ -14,7 +13,6 @@ body {
     background: linear-gradient(135deg, #667eea, #764ba2);
 }
 
-/* Glow Effect */
 body::before {
     content: "";
     position: absolute;
@@ -27,7 +25,6 @@ body::before {
     left: 20%;
 }
 
-/* Container */
 .container {
     width: 400px;
     padding: 35px;
@@ -44,7 +41,6 @@ body::before {
     color: white;
 }
 
-/* Tabs */
 .tabs {
     display: flex;
     margin-bottom: 25px;
@@ -67,7 +63,6 @@ body::before {
     color: #fff;
 }
 
-/* Forms */
 .form {
     display: none;
     animation: fade 0.4s ease;
@@ -89,7 +84,6 @@ body::before {
     }
 }
 
-/* Inputs */
 .input-box {
     position: relative;
     margin: 18px 0;
@@ -122,7 +116,6 @@ body::before {
     color: #fff;
 }
 
-/* Eye Icon */
 .toggle-pass {
     position: absolute;
     right: 12px;
@@ -131,7 +124,6 @@ body::before {
     cursor: pointer;
 }
 
-/* Strength Bar */
 .strength-bar {
     height: 6px;
     background: #eee;
@@ -145,7 +137,6 @@ body::before {
     transition: 0.3s;
 }
 
-/* Button */
 button {
     width: 100%;
     padding: 14px;
@@ -162,7 +153,6 @@ button:hover {
     background: rgba(255, 255, 255, 0.35);
 }
 
-/* Error */
 .error {
     font-size: 12px;
     color: #ff6b6b;
