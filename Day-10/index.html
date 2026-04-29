@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Filter</title>
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+        <h1>Product Filter Studio</h1>
+
+        <div class="filter-panel">
+            <div class="search-group">
+                <div class="input-wrapper">
+                    <span class="input-icon"></span>
+                    <input type="text" id="searchInput" placeholder="Search product..."
+                        autocomplete="off">
+                </div>
+                <div class="input-wrapper">
+                    <span class="input-icon"></span>
+                    <input type="number" id="minPrice" placeholder="Min Price ₹" min="0" step="100">
+                </div>
+                <div class="input-wrapper">
+                    <span class="input-icon"></span>
+                    <input type="number" id="maxPrice" placeholder="Max Price ₹" min="0" step="100">
+                </div>
+                <select id="sortPrice">
+                    <option value="">Sort by Price</option>
+                    <option value="low">Low → High</option>
+                    <option value="high">High → Low</option>
+                </select>
+            </div>
+
+            <div class="category-bar">
+                <button class="cat-btn active" data-category="all">All Products</button>
+                <button class="cat-btn" data-category="electronics">Electronics</button>
+                <button class="cat-btn" data-category="clothing">Clothing</button>
+            </div>
+        </div>
+
+        <div class="products" id="productList"></div>
+        <footer>real-time filter * price range * sort * smooth UI</footer>
+    </div>
+
+    <!-- Script JS -->
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
