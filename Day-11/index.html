@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Application</title>
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div>Question <span id="qNum">1</span>/10</div>
+            <div class="timer">⏳ <span id="time">10</span>s</div>
+        </div>
+
+        <div class="progress">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <h2 id="question"></h2>
+        <div class="options" id="options"></div>
+
+        <button class="next-btn" onclick="nextQuestion()">Next</button>
+    </div>
+
+    <!-- Script JS -->
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
