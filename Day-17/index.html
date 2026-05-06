@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Signup UI</title>
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div class="card">
+        <h2 id="title">Signup</h2>
+
+        <div class="input-group">
+            <input type="text" id="name" placeholder="Full Name">
+        </div>
+
+        <div class="input-group">
+            <input type="email" id="email" placeholder="Email Address">
+        </div>
+
+        <div class="input-group">
+            <input type="password" id="password" placeholder="Password">
+        </div>
+
+        <button onclick="handleSubmit()">Continue</button>
+
+        <div class="message" id="msg"></div>
+
+        <div class="toggle" onclick="toggleForm()" id="toggleText">
+            Already have an account? Login
+        </div>
+    </div>
+    
+    <!-- Script JS -->
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
