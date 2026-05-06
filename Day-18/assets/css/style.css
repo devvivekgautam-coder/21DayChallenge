@@ -1,0 +1,243 @@
+:root {
+    --glass-bg: rgba(255, 255, 255, 0.15);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+    --text-color: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%),
+        url('https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-attachment: fixed;
+    color: var(--text-color);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    min-height: 100vh;
+}
+
+.sidebar {
+    background: rgba(15, 23, 42, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-right: 1px solid var(--glass-border);
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 700;
+    font-size: 1.7rem;
+    color: white;
+    padding-bottom: 1.2rem;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 0.8rem 1rem;
+    border-radius: 12px;
+    margin: 7px 0;
+    transition: all 0.3s linear;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.nav-item.active {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    color: white;
+    box-shadow: var(--glass-shadow);
+}
+
+.nav-item:hover:not(.active) {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.main-content {
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.page-title h1 {
+    color: white;
+}
+
+.page-title p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.date-badge {
+    background: var(--glass-bg);
+    backdrop-filter: blur(4px);
+    border: 1px solid var(--glass-border);
+    color: white;
+    padding: 0.5rem 1.2rem;
+    border-radius: 40px;
+}
+
+.stat-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 1.5rem;
+    box-shadow: var(--glass-shadow);
+    transition: transform 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.card-icon {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 0.7rem;
+    border-radius: 12px;
+}
+
+.card-value {
+    color: white;
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin: 7px 0;
+}
+
+.card-label {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chart-card,
+.activity-card,
+.recent-table-section {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 1.5rem;
+    box-shadow: var(--glass-shadow);
+    color: white;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    color: rgba(255, 255, 255, 0.6);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+td {
+    padding: 1rem 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.bar {
+    background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0.3) 100%) !important;
+}
+
+.badge {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--glass-border);
+    color: white;
+}
+
+.badge.success {
+    background: rgba(16, 185, 129, 0.3);
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.data-section {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Responsive */
+
+@media (max-width: 720px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        position: relative;
+        flex-direction: row;
+        padding: 1rem;
+    }
+
+    .nav-item span,
+    .user-info {
+        display: none;
+    }
+
+    .data-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    table thead {
+        display: none;
+    }
+
+    table,
+    table tbody,
+    table tr,
+    table td {
+        display: block;
+        width: 100%;
+    }
+
+    table tr {
+        margin-bottom: 15px;
+        background: rgba(255, 255, 255, 0.05);
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    table td {
+        text-align: left;
+        padding: 8px 10px;
+        position: relative;
+    }
+
+    table td::before {
+        content: attr(data-label);
+        display: block;
+        font-weight: bold;
+        color: rgba(255, 255, 255, 0.6);
+        margin-bottom: 4px;
+    }
+}
