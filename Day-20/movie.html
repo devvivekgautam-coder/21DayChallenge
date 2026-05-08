@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie — CineStream</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/responsive.css">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎬</text></svg>">
+</head>
+
+<body id="movie-page">
+
+  <!-- Navbar -->
+  <nav id="navbar" class="scrolled">
+    <a href="./assets/index.html" class="nav-logo">CINESTREAM</a>
+    <ul class="nav-links">
+      <li><a href="./assets/index.html" class="nav-link">Home</a></li>
+      <li><a href="./assets/search.html" class="nav-link">Browse</a></li>
+      <li><a href="./assets/mylist.html" class="nav-link">My List</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="./assets/search.html" class="nav-search-btn" title="Search">🔍</a>
+      <div class="nav-icon">U</div>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div id="mobile-menu">
+    <a href="./assets/index.html" class="mobile-link">🏠 Home</a>
+    <a href="./assets/search.html" class="mobile-link">🔍 Browse</a>
+    <a href="./assets/mylist.html" class="mobile-link">📋 My List</a>
+  </div>
+
+  <div id="movie-content">
+
+    <!-- Backdrop -->
+    <div id="movie-backdrop"></div>
+
+    <!-- Movie Main Info -->
+    <div class="movie-main">
+      <div class="movie-poster-wrap">
+        <img id="movie-poster" src="" alt="" onerror="this.src='assets/images/no-poster.jpg'">
+      </div>
+      <div class="movie-info">
+        <div class="movie-info-sub">
+          <span id="movie-year"></span>
+          <span id="movie-runtime"></span>
+          <span id="movie-status"></span>
+          <span id="movie-language"></span>
+        </div>
+        <h1 id="movie-title"></h1>
+        <p id="movie-tagline"></p>
+        <div class="movie-buttons">
+          <button class="btn-play" id="movie-play">
+            <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:black;margin-right:4px">
+              <polygon points="5,3 19,12 5,21" />
+            </svg>
+            Play
+          </button>
+          <button class="btn-secondary" id="movie-list">+ My List</button>
+          <a href="javascript:history.back()" class="btn-secondary">← Back</a>
+        </div>
+        <div class="movie-genres" id="movie-genres"></div>
+        <p id="movie-overview"></p>
+        <div class="movie-stats">
+          <div class="stat">
+            <span class="stat-label">Rating</span>
+            <span class="stat-value" id="movie-rating"></span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Votes</span>
+            <span class="stat-value" id="movie-votes"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trailer -->
+    <div class="movie-section hidden" id="trailer-section">
+      <h2>🎬 Trailer</h2>
+      <div class="trailer-container">
+        <iframe id="trailer-iframe" src="" allow="encrypted-media" allowfullscreen frameborder="0"
+          loading="lazy"></iframe>
+      </div>
+    </div>
+
+    <!-- Cast -->
+    <div class="movie-section hidden" id="cast-section">
+      <h2>🎭 Cast</h2>
+      <div class="cast-grid" id="cast-grid"></div>
+    </div>
+
+    <!-- Similar Movies -->
+    <div class="movie-section hidden" id="similar-section">
+      <h2>🎞️ More Like This</h2>
+      <div class="similar-grid" id="similar-movies"></div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-bottom">
+      <span>© 2024 CineStream</span>
+      <span>Powered by <a href="https://www.themoviedb.org" target="_blank" style="color:var(--red)">TMDB</a></span>
+    </div>
+  </footer>
+
+  <script src="./assets/js/api.js"></script>
+  <script src="./assets/js/app.js"></script>
+  <script src="./assets/js/movie.js"></script>
+</body>
+
+</html>

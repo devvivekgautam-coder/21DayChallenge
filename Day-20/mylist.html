@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My List — CineStream</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/responsive.css">
+  <link rel="icon"
+    href="data:i./assets/mage/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎬</text></svg>">
+</head>./assets/
+
+<body id="mylist-page">
+
+  <!-- Navbar -->
+  <nav id="navbar" class="scrolled">
+    <a href="./index.html" class="nav-logo">CINESTREAM</a>
+    <ul>
+      <li><a href="./watch.html">Home</a></li>
+      <li><a href="./search.html" class="nav-link">Browse</a></li>
+      <li><a href="./mylist.html" class="nav-link active">My List</a></li>
+    </ul>
+    <div class="nav./assets/-right">
+      <a href="./search.html" class="nav-search-btn">🔍</a>
+      <div>U</div>
+      <button id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div id="mobile-menu">
+    <a href="./index.html" class="mobile-link">🏠 Home</a>
+    <a href="./search.html" class="mobile-link">🔍 Browse</a>
+    <a href="./mylist.html" class="mobile-link">📋 My List</a>
+  </div>
+
+  <div class="mylist-page">
+    <div class="mylist-hero">
+      <div>
+        <h1>📋 My List</h1>
+        <p class="mylist-count" id="mylist-count"></p>
+      </div>
+      <button class="btn-secondary" onclick="clearMyList()" style="font-size:0.8rem;padding:8px 16px">🗑 Clear
+        All</button>
+    </div>
+
+    <!-- Empty State -->
+    <div id="mylist-empty">
+      <div class="empty-icon">🎬</div>
+      <h2>Your list is empty</h2>
+      <p>Add movies and shows you want to watch later</p>
+      <a href="./search.html" class="btn-primary">Browse Content</a>
+    </div>
+
+    <!-- Grid -->
+    <div id="mylist-grid" class="hidden"></div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-bottom">
+      <span>© 2024 CineStream</span>
+      <span>Powered by <a href="https://www.themoviedb.org" target="_blank" style="color:var(--red)">TMDB</a></span>
+    </div>
+  </footer>
+
+  <script src="./assets/js/api.js"></script>
+  <script src="./assets/js/app.js"></script>
+  <script src="./assets/js/mylist.js"></script>
+</body>
+
+</html>

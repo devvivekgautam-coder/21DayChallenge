@@ -1,0 +1,522 @@
+@media (min-width: 1800px) {
+    :root {
+        --card-w: 220px;
+        --card-h: 330px;
+    }
+
+    #hero {
+        height: 95vh;
+    }
+
+    .movie-row {
+        padding: 8px 80px 16px;
+    }
+
+    .row-header {
+        padding: 0 80px 12px;
+    }
+
+    .hero-content {
+        padding: 0 80px 80px;
+    }
+
+    #navbar {
+        padding: 16px 80px;
+    }
+}
+
+@media (max-width: 1400px) {
+    :root {
+        --card-w: 165px;
+        --card-h: 248px;
+    }
+}
+
+@media (max-width: 1199px) {
+    :root {
+        --card-w: 155px;
+        --card-h: 232px;
+    }
+
+    #navbar {
+        padding: 14px 32px;
+    }
+
+    .hero-content {
+        padding: 0 32px 64px;
+    }
+
+    .row-header {
+        padding: 0 32px 12px;
+    }
+
+    .movie-row {
+        padding: 8px 32px 16px;
+    }
+
+    .movie-section {
+        padding: 40px 32px;
+    }
+
+    .movie-main {
+        padding: 0 32px;
+    }
+
+    .mylist-hero {
+        padding: 40px 32px 32px;
+    }
+
+    #mylist-grid {
+        padding: 0 32px 60px;
+    }
+
+    .search-hero {
+        padding: 60px 32px 40px;
+    }
+
+    .genre-section {
+        padding: 0 32px 24px;
+    }
+
+    .results-section {
+        padding: 0 32px 60px;
+    }
+
+    footer {
+        padding: 60px 32px 40px;
+    }
+}
+
+@media (max-width: 991px) {
+    :root {
+        --card-w: 140px;
+        --card-h: 210px;
+    }
+
+    #navbar {
+        padding: 12px 24px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    #hero {
+        height: 75vh;
+    }
+
+    .hero-content {
+        padding: 0 24px 64px;
+        max-width: 500px;
+    }
+
+    #hero-title {
+        font-size: 2.5rem;
+    }
+
+    #hero-overview {
+        font-size: 0.9rem;
+    }
+
+    .hero-buttons {
+        gap: 8px;
+    }
+
+    .btn-play,
+    .btn-info {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .row-header {
+        padding: 0 24px 12px;
+    }
+
+    .movie-row {
+        padding: 8px 24px 16px;
+    }
+
+    .movie-main {
+        flex-direction: column;
+        padding: 0 24px;
+        align-items: center;
+        margin-top: -100px;
+    }
+
+    .movie-poster-wrap {
+        width: 180px;
+    }
+
+    #movie-poster {
+        width: 180px;
+    }
+
+    .movie-info {
+        padding-top: 0;
+        text-align: center;
+    }
+
+    .movie-buttons {
+        justify-content: center;
+    }
+
+    .movie-genres {
+        justify-content: center;
+    }
+
+    .movie-stats {
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    #movie-backdrop {
+        height: 40vh;
+    }
+
+    .movie-section {
+        padding: 32px 24px;
+    }
+
+    .cast-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+
+    .similar-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+
+    .mylist-hero {
+        padding: 32px 24px 24px;
+    }
+
+    #mylist-grid {
+        padding: 0 24px 60px;
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    }
+
+    .search-hero {
+        padding: 50px 24px 32px;
+    }
+
+    .search-hero h1 {
+        font-size: 2rem;
+    }
+
+    .genre-section {
+        padding: 0 24px 20px;
+    }
+
+    .results-section {
+        padding: 0 24px 60px;
+    }
+
+    #search-results {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    }
+
+    footer {
+        padding: 48px 24px 32px;
+    }
+
+    .player-controls {
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px;
+    }
+
+    .controls-center {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    :root {
+        --card-w: 130px;
+        --card-h: 195px;
+    }
+
+    #navbar {
+        padding: 12px 16px;
+    }
+
+    .nav-logo {
+        font-size: 1.6rem;
+    }
+
+    #hero {
+        height: 65vh;
+        min-height: 500px;
+    }
+
+    .hero-content {
+        padding: 0 16px 56px;
+    }
+
+    #hero-title {
+        font-size: 2rem;
+    }
+
+    #hero-overview {
+        display: none;
+    }
+
+    .hero-buttons {
+        flex-wrap: wrap;
+    }
+
+    .hero-dots {
+        right: 16px;
+    }
+
+    .row-header {
+        padding: 0 16px 8px;
+    }
+
+    .row-title {
+        font-size: 1rem;
+    }
+
+    .movie-row {
+        padding: 8px 16px 12px;
+        gap: 6px;
+    }
+
+    .movie-main {
+        padding: 0 16px;
+        margin-top: -80px;
+    }
+
+    .movie-poster-wrap {
+        width: 140px;
+    }
+
+    #movie-poster {
+        width: 140px;
+    }
+
+    #movie-title {
+        font-size: 1.8rem;
+    }
+
+    .movie-section {
+        padding: 24px 16px;
+    }
+
+    #movie-backdrop {
+        height: 35vh;
+    }
+
+    .cast-grid {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+        gap: 12px;
+    }
+
+    .mylist-hero {
+        padding: 24px 16px 20px;
+    }
+
+    #mylist-grid {
+        padding: 0 16px 60px;
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        gap: 12px;
+    }
+
+    .search-hero {
+        padding: 40px 16px 24px;
+    }
+
+    .search-hero h1 {
+        font-size: 1.6rem;
+    }
+
+    .genre-section {
+        padding: 0 16px 16px;
+    }
+
+    .results-section {
+        padding: 0 16px 60px;
+    }
+
+    #search-results {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 12px;
+    }
+
+    footer {
+        padding: 40px 16px 32px;
+    }
+
+    .footer-links {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .player-info-bar {
+        padding: 16px 16px;
+    }
+}
+
+@media (max-width: 575px) {
+    :root {
+        --card-w: 120px;
+        --card-h: 180px;
+    }
+
+    .loading-logo {
+        font-size: 2.5rem;
+    }
+
+    #hero {
+        height: 60vh;
+    }
+
+    .hero-content {
+        padding: 0 12px 48px;
+    }
+
+    #hero-title {
+        font-size: 1.6rem;
+    }
+
+    .btn-play,
+    .btn-info {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+
+    .btn-list {
+        padding: 8px 14px;
+        font-size: 0.8rem;
+    }
+
+    .movie-row {
+        padding: 8px 12px 12px;
+        gap: 5px;
+    }
+
+    .row-header {
+        padding: 0 12px 8px;
+    }
+
+    .movie-main {
+        padding: 0 12px;
+    }
+
+    .movie-section {
+        padding: 20px 12px;
+    }
+
+    .cast-grid {
+        grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+        gap: 8px;
+    }
+
+    .cast-img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .mylist-hero {
+        padding: 20px 12px 16px;
+    }
+
+    #mylist-grid {
+        padding: 0 12px 48px;
+    }
+
+    #mylist-empty {
+        padding: 80px 12px;
+    }
+
+    .search-hero {
+        padding: 30px 12px 20px;
+    }
+
+    .genre-section {
+        padding: 0 12px 12px;
+    }
+
+    .results-section {
+        padding: 0 12px 48px;
+    }
+
+    #search-results {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 10px;
+    }
+
+    footer {
+        padding: 32px 12px 24px;
+    }
+
+    .footer-links {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (hover: none) {
+    .movie-card:hover {
+        transform: none;
+        z-index: 1;
+    }
+
+    .card-overlay {
+        opacity: 1;
+    }
+
+    .slider-arrow {
+        opacity: 1;
+    }
+
+    .mylist-overlay {
+        opacity: 0;
+    }
+
+    .search-overlay {
+        opacity: 0;
+    }
+
+    .movie-card {
+        -webkit-tap-highlight-color: transparent;
+    }
+}
+
+@media print {
+
+    #navbar,
+    footer,
+    .hero-buttons,
+    #hero-trailer {
+        display: none;
+    }
+
+    body {
+        background: white;
+        color: black;
+    }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+    #hero {
+        height: 100vw;
+        min-height: auto;
+    }
+
+    .hero-content {
+        padding: 0 16px 24px;
+    }
+
+    #hero-overview {
+        display: none;
+    }
+}

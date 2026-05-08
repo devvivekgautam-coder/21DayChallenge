@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Watch — CineStream</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/responsive.css">
+  <style>
+    body {
+      background: #000;
+      overflow-x: hidden;
+    }
+
+    .watch-layout {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+  </style>
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎬</text></svg>">
+</head>
+
+<body id="player-page">
+
+  <!-- Player Header -->
+  <div class="player-header">
+    <a href="javascript:history.back()" class="back-btn">← Back</a>
+    <span class="player-page-title" id="player-title-header"></span>
+  </div>
+
+  <!-- Main Player -->
+  <div id="player-container"></div>
+
+  <!-- Player Info Bar -->
+  <div class="player-info-bar">
+    <h2 id="player-title"></h2>
+    <p id="player-meta"></p>
+  </div>
+
+  <!-- Similar / Up Next -->
+  <div class="movie-section" style="background:var(--dark2)">
+    <h2>▶ Up Next</h2>
+    <div class="similar-grid" id="similar-grid"></div>
+  </div>
+
+  <script src="./assets/js/api.js"></script>
+  <script src="./assets/js/app.js"></script>
+  <script src="./assets/js/player.js"></script>
+  <script>
+    
+    document.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+        const t = document.getElementById('player-title')?.textContent;
+        if (t) document.getElementById('player-title-header').textContent = t;
+      }, 2000);
+    });
+  </script>
+</body>
+
+</html>

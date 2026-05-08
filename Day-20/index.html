@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netflix — Watch Movies & TV Shows</title>
+  <meta name="description" content="Stream the latest movies and TV shows. Your premium entertainment destination.">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/responsive.css">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎬</text></svg>">
+</head>
+
+<body>
+
+  <!-- Loading Screen -->
+  <div id="loading-screen">
+    <div class="loading-logo">CINESTREAM</div>
+    <div class="loading-bar">
+      <div class="loading-bar-fill"></div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav id="navbar">
+    <a href="./index.html" class="nav-logo">CINESTREAM</a>
+    <ul class="nav-links">
+      <li><a href="./index.html" class="nav-link active">Home</a></li>
+      <li><a href="./search.html" class="nav-link">Browse</a></li>
+      <li><a href="./mylist.html" class="nav-link">My List</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="./search.html" class="nav-search-btn" title="Search">🔍</a>
+      <div class="nav-icon" title="Profile">U</div>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu">
+    <a href="./index.html" class="mobile-link">🏠 Home</a>
+    <a href="./search.html" class="mobile-link">🔍 Browse</a>
+    <a href="./mylist.html" class="mobile-link">📋 My List</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div id="hero-trailer" class="hidden"></div>
+    <div class="hero-gradient"></div>
+    <div class="hero-content">
+      <div class="hero-badge">🔥 Trending</div>
+      <h1 id="hero-title">Loading...</h1>
+      <div class="hero-meta">
+        <span id="hero-rating">⭐</span>
+        <span id="hero-year"></span>
+      </div>
+      <p id="hero-overview"></p>
+      <div class="hero-buttons">
+        <button class="btn-play" id="hero-play">
+          <svg viewBox="0 0 24 24">
+            <polygon points="5,3 19,12 5,21" />
+          </svg>
+          Play
+        </button>
+        <button class="btn-info" id="hero-info">ℹ More Info</button>
+        <button class="btn-list" id="hero-list">+ My List</button>
+      </div>
+    </div>
+    <div class="hero-dots" id="hero-dots"></div>
+  </section>
+
+  <!-- Content Rows -->
+  <main class="content-section">
+
+    <!-- Continue Watching -->
+    <div class="row-section" id="continue-section">
+      <div class="row-header">
+        <h2 class="row-title">Continue Watching</h2>
+      </div>
+      <div class="slider-wrapper">
+        <button class="slider-arrow arrow-left">&#8249;</button>
+        <div class="movie-row" id="continue-watching-row"></div>
+        <button class="slider-arrow arrow-right">&#8250;</button>
+      </div>
+    </div>
+
+    <!-- Trending -->
+    <div class="row-section">
+      <div class="row-header">
+        <h2 class="row-title">Trending Now</h2>
+        <a href="./search.html" class="row-see-all">See all →</a>
+      </div>
+      <div class="slider-wrapper">
+        <button class="slider-arrow arrow-left">&#8249;</button>
+        <div class="movie-row" id="trending-row"></div>
+        <button class="slider-arrow arrow-right">&#8250;</button>
+      </div>
+    </div>
+
+    <!-- Popular -->
+    <div class="row-section">
+      <div class="row-header">
+        <h2 class="row-title">Popular on CineStream</h2>
+        <a href="./search.html" class="row-see-all">See all →</a>
+      </div>
+      <div class="slider-wrapper">
+        <button class="slider-arrow arrow-left">&#8249;</button>
+        <div class="movie-row" id="popular-row"></div>
+        <button class="slider-arrow arrow-right">&#8250;</button>
+      </div>
+    </div>
+
+    <!-- My List -->
+    <div class="row-section">
+      <div class="row-header">
+        <h2 class="row-title">My List</h2>
+        <a href="./mylist.html" class="row-see-all">View all →</a>
+      </div>
+      <div class="slider-wrapper">
+        <button class="slider-arrow arrow-left">&#8249;</button>
+        <div class="movie-row" id="mylist-row"></div>
+        <button class="slider-arrow arrow-right">&#8250;</button>
+      </div>
+    </div>
+
+    <!-- Top Rated -->
+    <div class="row-section">
+      <div class="row-header">
+        <h2 class="row-title">Top Rated</h2>
+      </div>
+      <div class="slider-wrapper">
+        <button class="slider-arrow arrow-left">&#8249;</button>
+        <div class="movie-row" id="toprated-row"></div>
+        <button class="slider-arrow arrow-right">&#8250;</button>
+      </div>
+    </div>
+
+    <!-- Upcoming -->
+    <div class="row-section">
+      <div class="row-header">
+        <h2 class="row-title">Coming Soon</h2>
+      </div>
+      <div class="slider-wrapper">
+        <button class="slider-arrow arrow-left">&#8249;</button>
+        <div class="movie-row" id="upcoming-row"></div>
+        <button class="slider-arrow arrow-right">&#8250;</button>
+      </div>
+    </div>
+
+    <!-- Now Playing -->
+    <div class="row-section">
+      <div class="row-header">
+        <h2 class="row-title">Now Playing</h2>
+      </div>
+      <div class="slider-wrapper">
+        <button class="slider-arrow arrow-left">&#8249;</button>
+        <div class="movie-row" id="nowplaying-row"></div>
+        <button class="slider-arrow arrow-right">&#8250;</button>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-logo">CINESTREAM</div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Browse</h4>
+        <a href="./search.html">Movies</a>
+        <a href="./search.html">TV Shows</a>
+        <a href="./search.html">New &amp; Popular</a>
+      </div>
+      <div class="footer-col">
+        <h4>My Account</h4>
+        <a href="./mylist.html">My List</a>
+        <a href="#">Watch History</a>
+        <a href="#">Preferences</a>
+      </div>
+      <div class="footer-col">
+        <h4>Help</h4>
+        <a href="#">FAQ</a>
+        <a href="#">Speed Test</a>
+        <a href="#">Contact Us</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Cookie Preferences</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 CineStream. All rights reserved.</span>
+      <span>Powered by <a href="https://www.themoviedb.org" target="_blank" style="color:var(--red)">TMDB</a></span>
+    </div>
+  </footer>
+
+  <script src="./assets/js/api.js"></script>
+  <script src="./assets/js/app.js"></script>
+</body>
+
+</html>
